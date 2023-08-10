@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 6.2.1 amd64
+# SymbolsHelper-Confirmed: 6.4.0 amd64
 libQt6Bodymovin.so.6 libqt6bodymovin6 #MINVER#
 * Build-Depends-Package: qt6-qtlottie-dev
  _ZN10BMRepeater16updatePropertiesEi@Base 6.2.1
@@ -267,18 +267,11 @@ libQt6Bodymovin.so.6 libqt6bodymovin6 #MINVER#
  _ZNK9BMEllipse6renderER14LottieRenderer@Base 6.2.1
  _ZNK9BMEllipse8positionEv@Base 6.2.1
  _ZNK9BMLiteral10metaObjectEv@Base 6.2.1
- (optional=templinst)_ZNSt8_Rb_treeIiSt4pairIKiPN15BMFreeFormShape15VertexBuildInfoEESt10_Select1stIS5_ESt4lessIiESaIS5_EE24_M_get_insert_unique_posERS1_@Base 6.2.1
- (optional=templinst)_ZNSt8_Rb_treeIiSt4pairIKiPN15BMFreeFormShape15VertexBuildInfoEESt10_Select1stIS5_ESt4lessIiESaIS5_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS5_ERS1_@Base 6.2.1
- (optional=templinst)_ZNSt8_Rb_treeIiSt4pairIKibESt10_Select1stIS2_ESt4lessIiESaIS2_EE24_M_get_insert_unique_posERS1_@Base 6.2.1
- (optional=templinst)_ZNSt8_Rb_treeIiSt4pairIKibESt10_Select1stIS2_ESt4lessIiESaIS2_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS2_ERS1_@Base 6.2.1
  _ZTI10BMPropertyI6QSizeFE@Base 6.2.1
- _ZTI10BMPropertyIdE@Base 6.2.1
- _ZTI10BMPropertyIiE@Base 6.2.1
  _ZTI10BMRepeater@Base 6.2.1
  _ZTI10BMTrimPath@Base 6.2.1
  _ZTI12BMFillEffect@Base 6.2.1
  _ZTI12BMImageLayer@Base 6.2.1
- _ZTI12BMProperty2DI6QSizeFE@Base 6.2.1
  _ZTI12BMShapeLayer@Base 6.2.1
  _ZTI14LottieRenderer@Base 6.2.1
  _ZTI15BMFreeFormShape@Base 6.2.1
@@ -323,14 +316,10 @@ libQt6Bodymovin.so.6 libqt6bodymovin6 #MINVER#
  _ZTS8BMStroke@Base 6.2.1
  _ZTS9BMEllipse@Base 6.2.1
  _ZTS9BMLiteral@Base 6.2.1
- _ZTV10BMPropertyI6QSizeFE@Base 6.2.1
- _ZTV10BMPropertyIdE@Base 6.2.1
- _ZTV10BMPropertyIiE@Base 6.2.1
  _ZTV10BMRepeater@Base 6.2.1
  _ZTV10BMTrimPath@Base 6.2.1
  _ZTV12BMFillEffect@Base 6.2.1
  _ZTV12BMImageLayer@Base 6.2.1
- _ZTV12BMProperty2DI6QSizeFE@Base 6.2.1
  _ZTV12BMShapeLayer@Base 6.2.1
  _ZTV14LottieRenderer@Base 6.2.1
  _ZTV15BMFreeFormShape@Base 6.2.1
@@ -349,15 +338,3 @@ libQt6Bodymovin.so.6 libqt6bodymovin6 #MINVER#
  _ZTV8BMStroke@Base 6.2.1
  _ZTV9BMEllipse@Base 6.2.1
  _ZTV9BMLiteral@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI6QSizeFE10getCopyCtrEvENUlPKNS_18QMetaTypeInterfaceEPvPKvE_4_FUNES5_S6_S8_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI6QSizeFE10getMoveCtrEvENUlPKNS_18QMetaTypeInterfaceEPvS6_E_4_FUNES5_S6_S6_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI6QSizeFE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES5_S6_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI7QPointFE10getCopyCtrEvENUlPKNS_18QMetaTypeInterfaceEPvPKvE_4_FUNES5_S6_S8_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI7QPointFE10getMoveCtrEvENUlPKNS_18QMetaTypeInterfaceEPvS6_E_4_FUNES5_S6_S6_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeI7QPointFE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES5_S6_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIdE10getCopyCtrEvENUlPKNS_18QMetaTypeInterfaceEPvPKvE_4_FUNES4_S5_S7_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIdE10getMoveCtrEvENUlPKNS_18QMetaTypeInterfaceEPvS5_E_4_FUNES4_S5_S5_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIdE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES4_S5_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIiE10getCopyCtrEvENUlPKNS_18QMetaTypeInterfaceEPvPKvE_4_FUNES4_S5_S7_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIiE10getMoveCtrEvENUlPKNS_18QMetaTypeInterfaceEPvS5_E_4_FUNES4_S5_S5_@Base 6.2.1
- (optional=templinst)_ZZN9QtPrivate16QMetaTypeForTypeIiE13getDefaultCtrEvENUlPKNS_18QMetaTypeInterfaceEPvE_4_FUNES4_S5_@Base 6.2.1

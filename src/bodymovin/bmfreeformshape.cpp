@@ -1,31 +1,5 @@
-/****************************************************************************
-**
-** Copyright (C) 2018 The Qt Company Ltd.
-** Contact: https://www.qt.io/licensing/
-**
-** This file is part of the lottie-qt module of the Qt Toolkit.
-**
-** $QT_BEGIN_LICENSE:GPL$
-** Commercial License Usage
-** Licensees holding valid commercial Qt licenses may use this file in
-** accordance with the commercial license agreement provided with the
-** Software or, alternatively, in accordance with the terms contained in
-** a written agreement between you and The Qt Company. For licensing terms
-** and conditions see https://www.qt.io/terms-conditions. For further
-** information use the contact form at https://www.qt.io/contact-us.
-**
-** GNU General Public License Usage
-** Alternatively, this file may be used under the terms of the GNU
-** General Public License version 3 or (at your option) any later version
-** approved by the KDE Free Qt Foundation. The licenses are as published by
-** the Free Software Foundation and appearing in the file LICENSE.GPL3
-** included in the packaging of this file. Please review the following
-** information to ensure the GNU General Public License requirements will
-** be met: https://www.gnu.org/licenses/gpl-3.0.html.
-**
-** $QT_END_LICENSE$
-**
-****************************************************************************/
+// Copyright (C) 2018 The Qt Company Ltd.
+// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only
 
 #include "bmfreeformshape_p.h"
 
@@ -75,13 +49,13 @@ void BMFreeFormShape::construct(const QJsonObject &definition)
 
 void BMFreeFormShape::updateProperties(int frame)
 {
-    if (m_vertexMap.count()) {
+    if (m_vertexMap.size()) {
         QJsonObject keyframe = m_vertexMap.value(frame);
         // If this frame is a keyframe, so values must be updated
         if (!keyframe.isEmpty())
             buildShape(keyframe.value(QLatin1String("s")).toArray().at(0).toObject());
     } else {
-        for (int i =0; i < m_vertexList.count(); i++) {
+        for (int i =0; i < m_vertexList.size(); i++) {
             VertexInfo vi = m_vertexList.at(i);
             vi.pos.update(frame);
             vi.ci.update(frame);
@@ -112,7 +86,7 @@ void BMFreeFormShape::parseShapeKeyframes(QJsonObject &keyframes)
         } else
             parseEasedVertices(keyframe, keyframe.value(QLatin1String("t")).toVariant().toInt());
     }
-    if (m_vertexInfos.count())
+    if (m_vertexInfos.size())
         finalizeVertices();
 }
 
@@ -191,7 +165,7 @@ void BMFreeFormShape::buildShape(int frame)
             needToClose = (*it);
 
         // If there are less than two vertices, cannot make a bezier curve
-        if (m_vertexList.count() < 2)
+        if (m_vertexList.size() < 2)
             return;
 
         QPointF s(m_vertexList.at(0).pos.value());
@@ -200,7 +174,7 @@ void BMFreeFormShape::buildShape(int frame)
         m_path.moveTo(s);
         int i = 0;
 
-        while (i < m_vertexList.count() - 1) {
+        while (i < m_vertexList.size() - 1) {
             QPointF v = m_vertexList.at(i + 1).pos.value();
             QPointF c1 = m_vertexList.at(i).co.value();
             QPointF c2 = m_vertexList.at(i + 1).ci.value();
@@ -274,7 +248,7 @@ void BMFreeFormShape::parseEasedVertices(const QJsonObject &keyframe, int startF
     } else {
         // Last keyframe
 
-        int vertexCount = m_vertexInfos.count();
+        int vertexCount = m_vertexInfos.size();
         for (int i = 0; i < vertexCount; i++) {
             VertexBuildInfo *buildInfo = m_vertexInfos.value(i, nullptr);
             if (!buildInfo) {
@@ -301,7 +275,7 @@ void BMFreeFormShape::parseEasedVertices(const QJsonObject &keyframe, int startF
 void BMFreeFormShape::finalizeVertices()
 {
 
-    for (int i = 0; i < m_vertexInfos.count(); i++) {
+    for (int i = 0; i < m_vertexInfos.size(); i++) {
         QJsonObject posObj;
         posObj.insert(QLatin1String("a"), 1);
         posObj.insert(QLatin1String("k"), m_vertexInfos.value(i)->posKeyframes);

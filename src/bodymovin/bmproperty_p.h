@@ -1,31 +1,5 @@
-/****************************************************************************
-**
-** Copyright (C) 2018 The Qt Company Ltd.
-** Contact: https://www.qt.io/licensing/
-**
-** This file is part of the lottie-qt module of the Qt Toolkit.
-**
-** $QT_BEGIN_LICENSE:GPL$
-** Commercial License Usage
-** Licensees holding valid commercial Qt licenses may use this file in
-** accordance with the commercial license agreement provided with the
-** Software or, alternatively, in accordance with the terms contained in
-** a written agreement between you and The Qt Company. For licensing terms
-** and conditions see https://www.qt.io/terms-conditions. For further
-** information use the contact form at https://www.qt.io/contact-us.
-**
-** GNU General Public License Usage
-** Alternatively, this file may be used under the terms of the GNU
-** General Public License version 3 or (at your option) any later version
-** approved by the KDE Free Qt Foundation. The licenses are as published by
-** the Free Software Foundation and appearing in the file LICENSE.GPL3
-** included in the packaging of this file. Please review the following
-** information to ensure the GNU General Public License requirements will
-** be met: https://www.gnu.org/licenses/gpl-3.0.html.
-**
-** $QT_END_LICENSE$
-**
-****************************************************************************/
+// Copyright (C) 2018 The Qt Company Ltd.
+// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only
 
 #ifndef BMPROPERTY_P_H
 #define BMPROPERTY_P_H
@@ -131,13 +105,13 @@ public:
 protected:
     void addEasing(EasingSegment<T>& easing)
     {
-        if (m_easingCurves.length()) {
+        if (m_easingCurves.size()) {
             EasingSegment<T> prevEase = m_easingCurves.last();
             // The end value has to be hand picked to the
             // previous easing segment, as the json data does
             // not contain end values for segments
             prevEase.endFrame = easing.startFrame - 1;
-            m_easingCurves.replace(m_easingCurves.length() - 1, prevEase);
+            m_easingCurves.replace(m_easingCurves.size() - 1, prevEase);
         }
         m_easingCurves.push_back(easing);
     }
@@ -148,7 +122,7 @@ protected:
         const EasingSegment<T> *easing = m_currentEasing;
         if (!easing || easing->startFrame < frame ||
                 easing->endFrame > frame) {
-            for (int i=0; i < m_easingCurves.length(); i++) {
+            for (int i=0; i < m_easingCurves.size(); i++) {
                 if (m_easingCurves.at(i).startFrame <= frame &&
                         m_easingCurves.at(i).endFrame >= frame) {
                     m_currentEasing = &m_easingCurves.at(i);
@@ -181,7 +155,7 @@ protected:
             this->m_endFrame = startTime;
             easing.startFrame = startTime;
             easing.endFrame = startTime;
-            if (m_easingCurves.length()) {
+            if (m_easingCurves.size()) {
                 easing.startValue = m_easingCurves.last().endValue;
                 easing.endValue = m_easingCurves.last().endValue;
             }
@@ -281,7 +255,7 @@ protected:
             this->m_endFrame = startTime;
             easingCurve.startFrame = startTime;
             easingCurve.endFrame = startTime;
-            if (this->m_easingCurves.length()) {
+            if (this->m_easingCurves.size()) {
                 easingCurve.startValue = this->m_easingCurves.last().endValue;
                 easingCurve.endValue = this->m_easingCurves.last().endValue;
             }
