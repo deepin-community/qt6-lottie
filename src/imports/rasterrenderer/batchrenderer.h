@@ -13,6 +13,7 @@ QT_BEGIN_NAMESPACE
 
 class BMBase;
 class QImage;
+class QVersionNumber;
 class LottieAnimation;
 
 class BatchRenderer : public QThread
@@ -55,7 +56,8 @@ public slots:
 protected:
     void run() override;
 
-    int parse(BMBase *rootElement, const QByteArray &jsonSource) const;
+    int parse(BMBase *rootElement, const QByteArray &jsonSource,
+              const QVersionNumber &version) const;
 
     void prerender(Entry *animEntry);
 
@@ -72,6 +74,7 @@ private:
 
     int m_cacheSize = 2;
     QHash<LottieAnimation *, Entry *> m_animData;
+    int m_lastRenderedFrame = -1;
 };
 
 QT_END_NAMESPACE

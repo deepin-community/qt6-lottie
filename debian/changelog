@@ -1,3 +1,22 @@
+qt6-lottie (6.6.1-1) experimental; urgency=medium
+
+  [ Patrick Franz ]
+  * New upstream release (6.6.1).
+  * Bump Qt B-Ds to 6.6.1.
+  * Update list of installed files.
+  * Update symbols from buildlogs.
+  * Update d/copyright.
+
+ -- Patrick Franz <deltaone@debian.org>  Wed, 13 Dec 2023 19:20:28 +0100
+
+qt6-lottie (6.4.2-3) unstable; urgency=medium
+
+  [ Patrick Franz ]
+  * Remove build-dependency on libqt6opengl6-dev as it has been merged
+    into qt6-base-dev.
+
+ -- Patrick Franz <deltaone@debian.org>  Sat, 14 Oct 2023 20:24:56 +0200
+
 qt6-lottie (6.4.2-2) unstable; urgency=medium
 
   [ Patrick Franz ]
