@@ -16,3 +16,4 @@ usr/lib/${DEB_HOST_MULTIARCH}/libQt6Bodymovin.prl
 usr/lib/${DEB_HOST_MULTIARCH}/libQt6Bodymovin.so
 usr/lib/${DEB_HOST_MULTIARCH}/qt6/metatypes/qt6bodymovinprivate_none_metatypes.json
 usr/lib/${DEB_HOST_MULTIARCH}/qt6/modules/BodymovinPrivate.json
+usr/lib/${DEB_HOST_MULTIARCH}/cmake/Qt6BodymovinPrivate/Qt6BodymovinPrivateVersionlessAliasTargets.cmake
